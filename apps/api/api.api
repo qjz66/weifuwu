@@ -1,0 +1,40 @@
+syntax = "v1"
+
+info (
+	title:  "" // TODO: add title
+	desc:   "" // TODO: add description
+	author: "qjz66"
+	email:  "2199921383@qq.com"
+)
+
+type UserRegrequest {
+	// TODO: add members here and delete this comment
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+type UserRegresponse {
+	// TODO: add members here and delete this comment
+	Id int64 `json:"id"`
+}
+
+type UserLoginrequest {
+	// TODO: add members here and delete this comment
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+type UserLoginresponse {
+	// TODO: add members here and delete this comment
+	Id    int64  `json:"id"`
+	Token string `json:"token"`
+}
+
+service app-api {
+	@handler UserReg // TODO: set handler name and delete this comment
+	post /app/user/add (UserRegrequest) returns (UserRegresponse)
+
+	@handler UserLogin // TODO: set handler name and delete this comment
+	post /app/user/login (UserLoginrequest) returns (UserLoginresponse)
+}
+

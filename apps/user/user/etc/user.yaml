@@ -1,0 +1,11 @@
+Name: user.rpc
+ListenOn: 0.0.0.0:8080
+Etcd:
+  Hosts:
+  - 127.0.0.1:2379
+  Key: user.rpc
+AuthInfo:
+  AccessSecret: 258d5447-27d4-4fcf-ab1e-d6bd665cb77d
+  AccessExpire: 86400
+Mysql:
+  DataSource: root:qjzzjq20031013@tcp(localhost:3306)/users?charset=utf8&parseTime=True&loc=Local
