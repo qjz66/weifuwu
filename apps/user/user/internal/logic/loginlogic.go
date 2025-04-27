@@ -2,6 +2,7 @@ package logic
 
 import (
 	"context"
+	"tiny_service/apps/user/user/dao"
 	"tiny_service/apps/user/user/internal/common"
 	"tiny_service/apps/user/user/internal/svc"
 	"tiny_service/apps/user/user/user"
@@ -25,9 +26,13 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 
 func (l *LoginLogic) Login(in *user.UserLoginRequest) (*user.UserLoginResponse, error) {
 	// todo: add your logic here and delete this line
-	token, err := common.GetJwtToken(l.svcCtx.Config.AuthInfo.AccessSecret, l.svcCtx.Config.AuthInfo.AccessExpire, 1)
+	u, err := dao.GetUserByPwd(in.Username, in.Password)
 	if err != nil {
 		return nil, err
 	}
-	return &user.UserLoginResponse{Id: 1, Token: token}, nil
+	token, err := common.GetJwtToken(l.svcCtx.Config.AuthInfo.AccessSecret, l.svcCtx.Config.AuthInfo.AccessExpire, int64(u.ID))
+	if err != nil {
+		return nil, err
+	}
+	return &user.UserLoginResponse{Id: int64(u.ID), Token: token}, nil
 }

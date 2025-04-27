@@ -38,3 +38,59 @@ service app-api {
 	post /app/user/login (UserLoginrequest) returns (UserLoginresponse)
 }
 
+//产品相关
+type (
+	Product {
+		ID int64 `json:"id"` // 商品ID
+		ProductInfo //商品详细信息
+	}
+	ProductInfo {
+		Name        string  `json:"name"` // 产品名称
+		Description string  `json:"description"` // 商品描述
+		Price       float64 `json:"price"` // 商品价格
+		Stock       int64   `json:"stock"` // 库存
+		Category    string  `json:"category"` // 分类
+		Status      int64   `json:"status"` // 状态：1-正常，2-下架
+		CreateTime  int64   `json:"create_time,optional"` // 创建时间
+		UpdateTime  int64   `json:"update_time,optional"` // 更新时间
+	}
+	ProductAddReq {
+		ProductInfo
+	}
+	ProductAddResp {
+		ProductId int64 `json:"product_id"`
+	}
+	ProductInfoReq {
+		ProductId int64 `json:"product_id"` //商品id
+	}
+	ProductInfoResp {
+		Product Product `json:"product"`
+	}
+	ProductListReq {
+		Cursor int64 `json:"cursor"`
+		Ps     int64 `json:"ps"`
+		Desc   bool  `json:"desc"`
+	}
+	ProductListResp {
+		Products []*Product `json:"list"`
+	}
+	ProductDelReq {
+		ProductId int64 `json:"product_id"`
+	}
+	ProductDelResp  {}
+)
+
+service app-api {
+	@handler AddProduct // TODO: set handler name and delete this comment
+	post /app/product/add (ProductAddReq) returns (ProductAddResp)
+
+	@handler DelProduct // TODO: set handler name and delete this comment
+	post /app/product/del (ProductDelReq) returns (ProductDelResp)
+
+	@handler GetProduct // TODO: set handler name and delete this comment
+	post /app/product/get (ProductInfoReq) returns (ProductInfoResp)
+
+	@handler GetProductList // TODO: set handler name and delete this comment
+	post /app/product/list (ProductListReq) returns (ProductListResp)
+}
+

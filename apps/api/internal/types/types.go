@@ -3,6 +3,55 @@
 
 package types
 
+type Product struct {
+	ID int64 `json:"id"` // 商品ID
+	ProductInfo
+}
+
+type ProductAddReq struct {
+	ProductInfo
+}
+
+type ProductAddResp struct {
+	ProductId int64 `json:"product_id"`
+}
+
+type ProductDelReq struct {
+	ProductId int64 `json:"product_id"`
+}
+
+type ProductDelResp struct {
+}
+
+type ProductInfo struct {
+	Name        string  `json:"name"`                 // 产品名称
+	Description string  `json:"description"`          // 商品描述
+	Price       float64 `json:"price"`                // 商品价格
+	Stock       int64   `json:"stock"`                // 库存
+	Category    string  `json:"category"`             // 分类
+	Status      int64   `json:"status"`               // 状态：1-正常，2-下架
+	CreateTime  int64   `json:"create_time,optional"` // 创建时间
+	UpdateTime  int64   `json:"update_time,optional"` // 更新时间
+}
+
+type ProductInfoReq struct {
+	ProductId int64 `json:"product_id"` //商品id
+}
+
+type ProductInfoResp struct {
+	Product Product `json:"product"`
+}
+
+type ProductListReq struct {
+	Cursor int64 `json:"cursor"`
+	Ps     int64 `json:"ps"`
+	Desc   bool  `json:"desc"`
+}
+
+type ProductListResp struct {
+	Products []*Product `json:"list"`
+}
+
 type UserLoginrequest struct {
 	Username string `json:"username"`
 	Password string `json:"password"`

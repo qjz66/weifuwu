@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab25d4b0-456f-4081-aec1-d1010d66ee42" name="更改" comment="" />
+    <list default="true" id="ab25d4b0-456f-4081-aec1-d1010d66ee42" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/product/product/internal/dao/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/product/product/internal/dao/product.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/product/product/internal/models/gen.page.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/product/product/product.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/user/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/user/dao/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/user/user/dao/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/api.api" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/api.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/etc/app-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/etc/app-api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/internal/handler/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/api/internal/types/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/user/etc/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/user/etc/user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/user/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/user/internal/logic/loginlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/user/internal/logic/reglogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/user/internal/logic/reglogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,34 +50,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go 构建.go build admin.go.executor": "Run",
-    "Go 构建.go build app.go.executor": "Run",
-    "Go 构建.go build rpc.executor": "Run",
-    "Go 构建.go build rpc.go.executor": "Run",
-    "Go 构建.go build user.go.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/Projects/tiny_service/apps/user/user",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "go.sdk"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go 构建.go build admin.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build app.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build product.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build rpc.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build rpc.go.executor&quot;: &quot;Run&quot;,
+    &quot;Go 构建.go build user.go.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/tiny_service/apps/product/product&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.sdk&quot;,
+    &quot;数据库脚本.product.sql.executor&quot;: &quot;Run&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora_aws"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora_aws&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;3b71f7cc-2c99-49d4-90b3-39768d2ee00f&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Go 构建.go build app.go">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\tiny_service\apps\product\product\internal\dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go 构建.go build product.go">
+    <configuration name="product.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/apps/product/product/product.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="3b71f7cc-2c99-49d4-90b3-39768d2ee00f" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="tiny_service" />
       <working_directory value="$PROJECT_DIR$" />
@@ -84,6 +121,15 @@
       <filePath value="$PROJECT_DIR$/apps/api/app.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build product.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="tiny_service" />
+      <working_directory value="$PROJECT_DIR$/apps/product/product" />
+      <kind value="FILE" />
+      <package value="tiny_service" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/apps/product/product/product.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build user.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tiny_service" />
       <working_directory value="$PROJECT_DIR$/apps/user/user" />
@@ -104,14 +150,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go 构建.go build user.go" />
-      <item itemvalue="Go 构建.go build app.go" />
       <item itemvalue="Go 构建.go build admin.go" />
+      <item itemvalue="Go 构建.go build app.go" />
+      <item itemvalue="Go 构建.go build product.go" />
+      <item itemvalue="Go 构建.go build user.go" />
+      <item itemvalue="数据库脚本.product.sql" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go 构建.go build product.go" />
         <item itemvalue="Go 构建.go build app.go" />
         <item itemvalue="Go 构建.go build user.go" />
+        <item itemvalue="数据库脚本.product.sql" />
         <item itemvalue="Go 构建.go build admin.go" />
       </list>
     </recent_temporary>
@@ -130,5 +180,16 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/apps/product/product/internal/dao/product.go</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

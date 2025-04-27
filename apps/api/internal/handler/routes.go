@@ -26,4 +26,29 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 			},
 		},
 	)
+
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodPost,
+				Path:    "/app/product/add",
+				Handler: AddProductHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/app/product/del",
+				Handler: DelProductHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/app/product/get",
+				Handler: GetProductHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/app/product/list",
+				Handler: GetProductListHandler(serverCtx),
+			},
+		},
+	)
 }

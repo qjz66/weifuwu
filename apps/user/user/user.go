@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"tiny_service/apps/user/user/dao"
 
 	"tiny_service/apps/user/user/internal/config"
 	"tiny_service/apps/user/user/internal/server"
@@ -24,6 +25,7 @@ func main() {
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
 	ctx := svc.NewServiceContext(c)
+	dao.InitGDB(c.Mysql)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
 		user.RegisterUserServer(grpcServer, server.NewUserServer(ctx))
